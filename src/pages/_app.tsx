@@ -3,7 +3,6 @@ import { ChakraProvider, theme } from "@chakra-ui/core";
 import { merge } from "@chakra-ui/utils";
 import Head from "next/head";
 
-import "../css/fonts.css";
 import React from "react";
 
 const hauptrolleTheme = merge(theme, {
@@ -13,11 +12,6 @@ const hauptrolleTheme = merge(theme, {
         color: "gray.800",
       },
     },
-  },
-  fonts: {
-    body: "'Inter', sans-serif",
-    heading: "'Inter', sans-serif",
-    mono: "Menlo, monospace",
   },
 });
 
