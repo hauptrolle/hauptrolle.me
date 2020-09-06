@@ -5,9 +5,9 @@ export const Section: React.FC = ({ children }) => {
   return (
     <Box
       py={{
-        base: 8,
-        md: 12,
-        lg: 20,
+        base: 10,
+        md: 16,
+        lg: 24,
       }}
     >
       {children}

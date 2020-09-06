@@ -4,6 +4,13 @@ import { merge } from "@chakra-ui/utils";
 import Head from "next/head";
 
 const hauptrolleTheme = merge(theme, {
+  styles: {
+    global: {
+      "html, body": {
+        color: "gray.800",
+      },
+    },
+  },
   fonts: {
     body: "'Inter', sans-serif",
     heading: "'Inter', sans-serif",

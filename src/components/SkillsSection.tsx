@@ -42,7 +42,7 @@ export const SkillsSection = ({ skills }: Props) => {
           </Heading>
           <SimpleGrid columns={[1, null, 2]} spacing={4}>
             {skills.map((skill) => (
-              <Flex mb={2} _last={{ mb: 0 }} key={skill.id}>
+              <Flex mb={4} _last={{ mb: 0 }} key={skill.id}>
                 <Box>
                   <Flex
                     mr={4}
