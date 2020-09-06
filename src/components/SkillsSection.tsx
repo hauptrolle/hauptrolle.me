@@ -1,39 +1,12 @@
 import React from "react";
-import { Box, Heading, SimpleGrid, Text, Flex, Icon } from "@chakra-ui/core";
-import {
-  AiOutlineCode,
-  AiOutlineClear,
-  AiOutlineBug,
-  AiOutlineLike,
-} from "react-icons/ai";
+import { Box, SimpleGrid, Text, Flex } from "@chakra-ui/core";
 
-import type { Skill } from "../pages/api/skills";
+import { skills } from "../skills";
 import { PageWrapper } from "./PageWrapper";
 import { Section } from "./Section";
 import { SectionHeadline } from "./SectionHeadline";
 
-type Props = {
-  skills: Skill[];
-};
-
-const iconProps = {
-  boxSize: 6,
-};
-
-const getIcon = (id: string) => {
-  switch (id) {
-    case "frontend":
-      return <Icon as={AiOutlineCode} {...iconProps} />;
-    case "design":
-      return <Icon as={AiOutlineClear} {...iconProps} />;
-    case "agile":
-      return <Icon as={AiOutlineLike} {...iconProps} />;
-    case "testing":
-      return <Icon as={AiOutlineBug} {...iconProps} />;
-  }
-};
-
-export const SkillsSection = ({ skills }: Props) => {
+export const SkillsSection = () => {
   return (
     <Box bg={"gray.800"} color={"white"}>
       <PageWrapper>
@@ -52,7 +25,7 @@ export const SkillsSection = ({ skills }: Props) => {
                     p={2}
                     color={"green.800"}
                   >
-                    {getIcon(skill.id)}
+                    {skill.icon}
                   </Flex>
                 </Box>
                 <Box>
