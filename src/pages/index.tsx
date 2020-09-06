@@ -5,14 +5,15 @@ import type { Skill } from "./api/skills";
 import { Header } from "../components/Header";
 import { HeroSection } from "../components/HeroSection";
 import { SkillsSection } from "../components/SkillsSection";
+import { ProjectsSection } from "../components/ProjectsSection";
 
 type Props = {
   skills: Skill[];
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const res = await fetch(`${process.env.API_URL}/api/skills`);
-  const skills = await res.json();
+  const skillsRes = await fetch(`${process.env.API_URL}/api/skills`);
+  const skills = await skillsRes.json();
 
   return {
     props: {
@@ -27,6 +28,7 @@ const HomePage: NextPage<Props> = ({ skills }) => {
       <Header />
       <HeroSection />
       <SkillsSection skills={skills} />
+      <ProjectsSection />
     </>
   );
 };
