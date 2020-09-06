@@ -10,6 +10,7 @@ import {
 import type { Skill } from "../pages/api/skills";
 import { PageWrapper } from "./PageWrapper";
 import { Section } from "./Section";
+import { SectionHeadline } from "./SectionHeadline";
 
 type Props = {
   skills: Skill[];
@@ -37,9 +38,7 @@ export const SkillsSection = ({ skills }: Props) => {
     <Box bg={"gray.800"} color={"white"}>
       <PageWrapper>
         <Section>
-          <Heading as={"h2"} size="xl" fontWeight={500} mb={8}>
-            My Skills
-          </Heading>
+          <SectionHeadline>My Skills</SectionHeadline>
           <SimpleGrid columns={[1, null, 2]} spacing={4}>
             {skills.map((skill) => (
               <Flex mb={4} _last={{ mb: 0 }} key={skill.id}>
