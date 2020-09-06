@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, IconButton, Flex } from "@chakra-ui/core";
+import { Text, IconButton, Flex } from "@chakra-ui/core";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
 import { PageWrapper } from "./PageWrapper";
