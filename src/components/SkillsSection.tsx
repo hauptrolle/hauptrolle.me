@@ -18,12 +18,9 @@ export const SkillsSection = () => {
                 <Box>
                   <Flex
                     mr={4}
-                    bg={"green.400"}
-                    rounded={"full"}
                     alignItems={"center"}
                     justifyContent={"center"}
-                    p={2}
-                    color={"green.800"}
+                    fontSize={"2xl"}
                   >
                     {skill.icon}
                   </Flex>
