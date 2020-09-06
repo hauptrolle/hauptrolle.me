@@ -42,7 +42,7 @@ export const HeroSection = () => {
               Enterprise-React-Applications
             </Box>{" "}
             at{" "}
-            <Link color={"green.400"} href="https://www.aoe.com/de/home.html">
+            <Link color={"green.600"} href="https://www.aoe.com/de/home.html">
               AOE
             </Link>
             .

@@ -9,7 +9,7 @@ export const Footer = () => {
       <Flex
         fontSize={"sm"}
         py={4}
-        color={"gray.500"}
+        color={"gray.600"}
         borderTopWidth={1}
         borderTopStyle={"solid"}
         borderTopColor={"gray.300"}
