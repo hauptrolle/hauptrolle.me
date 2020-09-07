@@ -1,5 +1,11 @@
 import React from "react";
-import { Box, SimpleGrid, Text, Flex } from "@chakra-ui/core";
+import {
+  Box,
+  SimpleGrid,
+  Text,
+  Flex,
+  useColorModeValue,
+} from "@chakra-ui/core";
 
 import { skills } from "../skills";
 import { PageWrapper } from "./PageWrapper";
@@ -8,13 +14,40 @@ import { SectionHeadline } from "./SectionHeadline";
 
 export const SkillsSection = () => {
   return (
-    <Box bg={"gray.800"} color={"white"}>
+    <Box bg={useColorModeValue("gray.100", "brand.darkShade")}>
       <PageWrapper>
         <Section>
           <SectionHeadline>My Skills</SectionHeadline>
           <SimpleGrid columns={[1, null, 2]} spacing={4}>
             {skills.map((skill) => (
-              <Flex mb={4} _last={{ mb: 0 }} key={skill.id}>
+              <Flex
+                mb={4}
+                _last={{ mb: 0 }}
+                key={skill.id}
+                position={"relative"}
+                zIndex={1}
+                p={2}
+                transition={"all 0.3s ease"}
+                _after={{
+                  transition: "all 0.3s ease",
+                  position: "absolute",
+                  top: "-5%",
+                  left: 0,
+                  content: "''",
+                  width: "100%",
+                  height: "120%",
+                  zIndex: -1,
+                }}
+                _hover={{
+                  _after: {
+                    transform: "scale(1.05)",
+                    backgroundColor: useColorModeValue(
+                      "gray.300",
+                      "brand.dark"
+                    ),
+                  },
+                }}
+              >
                 <Box>
                   <Flex
                     mr={4}
@@ -36,7 +69,9 @@ export const SkillsSection = () => {
                   >
                     {skill.title}
                   </Text>
-                  <Text color={"gray.300"}>{skill.description}</Text>
+                  <Text color={useColorModeValue("gray.700", "gray.300")}>
+                    {skill.description}
+                  </Text>
                 </Box>
               </Flex>
             ))}

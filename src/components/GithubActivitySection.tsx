@@ -7,6 +7,7 @@ import {
   Heading,
   SimpleGrid,
   Box,
+  useColorModeValue,
 } from "@chakra-ui/core";
 
 import { PageWrapper } from "./PageWrapper";
@@ -39,9 +40,12 @@ const ActivityList = ({
             as={"a"}
             href={repo.url}
             p={4}
-            bg={"gray.900"}
+            borderStyle={"solid"}
+            borderWidth={1}
+            borderColor={useColorModeValue("gray.300", "brand.dark")}
             rounded={"md"}
-            color={"gray.200"}
+            // bg={"gray.900"}
+            // color={"gray.200"}
           >
             <Stack spacing={2}>
               <Text color={"blue.300"}>{repo.name}</Text>
@@ -56,7 +60,7 @@ const ActivityList = ({
 
 export const GithubActivitySection = ({ starred, contributed }: Props) => {
   return (
-    <Box bg={"gray.800"} color={"white"}>
+    <Box bg={useColorModeValue("gray.100", "brand.darkShade")}>
       <PageWrapper>
         <Section>
           <SectionHeadline>Github Activity</SectionHeadline>

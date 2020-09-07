@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@chakra-ui/core";
+import { Box, useColorModeValue } from "@chakra-ui/core";
 
 import { PageWrapper } from "./PageWrapper";
 import { Section } from "./Section";
@@ -10,7 +10,12 @@ export const ProjectsSection = () => {
     <PageWrapper>
       <Section>
         <SectionHeadline>Projects</SectionHeadline>
-        <Box p={4} textAlign={"center"} bg={"gray.100"} rounded={"md"}>
+        <Box
+          p={6}
+          textAlign={"center"}
+          bg={useColorModeValue("gray.100", "brand.darkShade")}
+          rounded={"md"}
+        >
           Work in progress. Check out later ✌️
         </Box>
       </Section>

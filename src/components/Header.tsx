@@ -1,10 +1,13 @@
 import React from "react";
-import { Text, IconButton, Flex } from "@chakra-ui/core";
+import { Text, IconButton, Flex, useColorMode, Button } from "@chakra-ui/core";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 import { PageWrapper } from "./PageWrapper";
 
 export const Header = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <PageWrapper>
       <Flex pt={8} justifyContent={"space-between"} alignItems={"center"}>
@@ -13,6 +16,17 @@ export const Header = () => {
         </Text>
         <Flex>
           <IconButton
+            size={"sm"}
+            variant={"ghost"}
+            onClick={toggleColorMode}
+            icon={colorMode === "light" ? <FaMoon /> : <FaSun />}
+            aria-label={"Select color mode"}
+          />
+          <IconButton
+            ml={{
+              base: 2,
+              md: 4,
+            }}
             as={"a"}
             href="https://github.com/hauptrolle"
             variant={"ghost"}

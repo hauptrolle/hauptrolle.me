@@ -6,12 +6,20 @@ import Head from "next/head";
 import React from "react";
 
 const hauptrolleTheme = merge(theme, {
-  styles: {
-    global: {
-      "html, body": {
-        color: "gray.800",
-      },
+  colors: {
+    brand: {
+      green: "#0fa",
+      dark: "#111",
+      darkShade: "#191919",
     },
+  },
+  styles: {
+    global: (props) => ({
+      "html, body": {
+        bg: props.colorMode === "dark" ? "brand.dark" : "white",
+        color: props.colorMode === "dark" ? "white" : "gray.800",
+      },
+    }),
   },
 });
 

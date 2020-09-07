@@ -6,14 +6,7 @@ import { PageWrapper } from "./PageWrapper";
 export const Footer = () => {
   return (
     <PageWrapper>
-      <Flex
-        fontSize={"sm"}
-        py={4}
-        color={"gray.600"}
-        borderTopWidth={1}
-        borderTopStyle={"solid"}
-        borderTopColor={"gray.300"}
-      >
+      <Flex fontSize={"sm"} py={4} color={"gray.600"}>
         <Text>Build with Next.js + Chakra UI ❤️</Text>
       </Flex>
     </PageWrapper>
