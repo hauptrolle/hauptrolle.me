@@ -21,7 +21,7 @@ export const skills: Skill[] = [
   },
   {
     id: "design",
-    title: "Design",
+    title: "Design Interfaces",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
     icon: "👨‍🎨️",
@@ -35,7 +35,7 @@ export const skills: Skill[] = [
   },
   {
     id: "testing",
-    title: "Testing",
+    title: "Testing Applications",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
     icon: "🐛",
