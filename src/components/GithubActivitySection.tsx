@@ -39,6 +39,7 @@ const ActivityList = ({
             key={repo.id}
             display={"block"}
             as={Link}
+            role={"listitem"}
             href={repo.url}
             p={4}
             borderStyle={"solid"}
