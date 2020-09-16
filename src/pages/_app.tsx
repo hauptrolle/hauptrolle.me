@@ -8,16 +8,25 @@ import React from "react";
 const hauptrolleTheme = merge(theme, {
   colors: {
     brand: {
-      green: "#0fa",
-      dark: "#111",
-      darkShade: "#191919",
+      green: {
+        base: "#0fa",
+        shade: "rgb(77 255 167 / 10%)",
+      },
+      dark: {
+        base: "#1a1c1d",
+        shade: "#131514",
+      },
     },
   },
   styles: {
     global: (props) => ({
       "html, body": {
-        bg: props.colorMode === "dark" ? "brand.dark" : "white",
+        bg: props.colorMode === "dark" ? "brand.dark.base" : "white",
         color: props.colorMode === "dark" ? "white" : "gray.800",
+      },
+      "*::selection": {
+        backgroundColor: "brand.green.shade",
+        color: "brand.green.base",
       },
     }),
   },

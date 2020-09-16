@@ -42,10 +42,8 @@ const ActivityList = ({
             p={4}
             borderStyle={"solid"}
             borderWidth={1}
-            borderColor={useColorModeValue("gray.300", "brand.dark")}
+            borderColor={useColorModeValue("gray.200", "brand.dark.shade")}
             rounded={"md"}
-            // bg={"gray.900"}
-            // color={"gray.200"}
           >
             <Stack spacing={2}>
               <Text color={"blue.300"}>{repo.name}</Text>
@@ -60,21 +58,19 @@ const ActivityList = ({
 
 export const GithubActivitySection = ({ starred, contributed }: Props) => {
   return (
-    <Box bg={useColorModeValue("gray.100", "brand.darkShade")}>
-      <PageWrapper>
-        <Section>
-          <SectionHeadline>Github Activity</SectionHeadline>
+    <PageWrapper>
+      <Section>
+        <SectionHeadline>Github Activity</SectionHeadline>
 
-          <SimpleGrid columns={[1, null, 2]} spacing={4}>
-            <ActivityList
-              headline={"Repositories I Contributed To ⌨️"}
-              items={contributed}
-            />
+        <SimpleGrid columns={[1, null, 2]} spacing={4}>
+          <ActivityList
+            headline={"Repositories I Contributed To 👨‍💻"}
+            items={contributed}
+          />
 
-            <ActivityList headline={"Repositories I Like 🌟"} items={starred} />
-          </SimpleGrid>
-        </Section>
-      </PageWrapper>
-    </Box>
+          <ActivityList headline={"Repositories I Like 🌟"} items={starred} />
+        </SimpleGrid>
+      </Section>
+    </PageWrapper>
   );
 };

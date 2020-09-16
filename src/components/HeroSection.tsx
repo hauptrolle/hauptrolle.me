@@ -12,7 +12,7 @@ import { PageWrapper } from "./PageWrapper";
 import { Section } from "./Section";
 
 export const HeroSection = () => {
-  const textColor = useColorModeValue("gray.600", "gray.400");
+  const textColor = useColorModeValue("gray.600", "white");
 
   return (
     <PageWrapper>
@@ -41,7 +41,13 @@ export const HeroSection = () => {
             }}
           >
             I am currently developing{" "}
-            <Box as={"span"} bg={"brand.green"} color={"gray.800"} p={1} px={2}>
+            <Box
+              as={"span"}
+              bg={"brand.green.base"}
+              color={"gray.800"}
+              p={1}
+              px={2}
+            >
               Enterprise-React-Applications
             </Box>{" "}
             at <Link href="https://www.aoe.com/de/home.html">AOE</Link>.

@@ -13,7 +13,7 @@ export const ProjectsSection = () => {
         <Box
           p={6}
           textAlign={"center"}
-          bg={useColorModeValue("gray.100", "brand.darkShade")}
+          bg={useColorModeValue("gray.100", "brand.dark.shade")}
           rounded={"md"}
         >
           Work in progress. Check out later ✌️
