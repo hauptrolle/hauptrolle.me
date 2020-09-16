@@ -7,6 +7,7 @@ import {
   Heading,
   SimpleGrid,
   Box,
+  Link,
   useColorModeValue,
 } from "@chakra-ui/core";
 
@@ -37,13 +38,17 @@ const ActivityList = ({
           <ListItem
             key={repo.id}
             display={"block"}
-            as={"a"}
+            as={Link}
             href={repo.url}
             p={4}
             borderStyle={"solid"}
             borderWidth={1}
             borderColor={useColorModeValue("gray.200", "brand.dark.shade")}
             rounded={"md"}
+            _hover={{
+              textDecoration: "none",
+              transform: "translateY(-5px)",
+            }}
           >
             <Stack spacing={2}>
               <Text color={"blue.300"}>{repo.name}</Text>
