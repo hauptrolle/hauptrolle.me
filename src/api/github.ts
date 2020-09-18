@@ -8,6 +8,12 @@ export type Repo = {
   description: string;
 };
 
+export type SideProject = Repo & {
+  stargazers: {
+    totalCount: number;
+  };
+};
+
 type Response = {
   user: {
     repositoriesContributedTo: {
@@ -16,6 +22,9 @@ type Response = {
     starredRepositories: {
       nodes: Repo[];
     };
+    stitchesUtils: SideProject;
+    stitchesReset: SideProject;
+    reactTodo: SideProject;
   };
 };
 
@@ -39,6 +48,33 @@ query {
         url
       }
     }
+    stitchesUtils: repository(name: "stitches-utils") {
+      id
+      name
+      description
+      url
+      stargazers {
+        totalCount
+      }
+    }
+    stitchesReset: repository(name: "stitches-reset") {
+      id
+      name
+      description
+      url
+      stargazers {
+        totalCount
+      }
+    }
+    reactTodo: repository(name: "react-todo") {
+      id
+      name
+      description
+      url
+      stargazers {
+        totalCount
+      }
+    }
   }
 }`;
 
@@ -56,5 +92,10 @@ query {
   return {
     starred: data.user.starredRepositories.nodes.reverse(),
     contributed: data.user.repositoriesContributedTo.nodes.reverse(),
+    sideProjects: [
+      data.user.stitchesUtils,
+      data.user.stitchesReset,
+      data.user.reactTodo,
+    ],
   };
 };

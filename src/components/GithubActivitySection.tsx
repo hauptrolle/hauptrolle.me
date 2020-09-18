@@ -52,7 +52,9 @@ const ActivityList = ({
             }}
           >
             <Stack spacing={2}>
-              <Text color={"blue.300"}>{repo.name}</Text>
+              <Text color={useColorModeValue("blue.300", "brand.green.base")}>
+                {repo.name}
+              </Text>
               {repo.description && <Text>{repo.description}</Text>}
             </Stack>
           </ListItem>

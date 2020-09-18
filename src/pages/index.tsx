@@ -7,11 +7,12 @@ import { HeroSection } from "../components/HeroSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { Footer } from "../components/Footer";
 import { GithubActivitySection } from "../components/GithubActivitySection";
-import { fetchRepositories, Repo } from "../api/github";
+import { fetchRepositories, Repo, SideProject } from "../api/github";
 
 type Props = {
   starred: Repo[];
   contributed: Repo[];
+  sideProjects: SideProject[];
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -25,13 +26,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const HomePage: NextPage<Props> = ({ starred, contributed }) => {
+const HomePage: NextPage<Props> = ({ starred, contributed, sideProjects }) => {
   return (
     <>
       <Header />
       <HeroSection />
       {/*<SkillsSection />*/}
-      <ProjectsSection />
+      <ProjectsSection projects={sideProjects} />
       <GithubActivitySection starred={starred} contributed={contributed} />
       <Footer />
     </>
