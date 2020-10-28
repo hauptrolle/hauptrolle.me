@@ -26,6 +26,7 @@ export const ProjectsSection = ({ projects }: Props) => {
         <Stack spacing={8}>
           {projects.map((project) => (
             <Box
+              key={project.id}
               as={Link}
               href={project.url}
               display={"block"}
