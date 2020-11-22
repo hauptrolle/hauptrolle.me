@@ -1,6 +1,6 @@
 import React from "react";
 import NextLink from "next/link";
-import { IconButton, Flex, Link } from "@chakra-ui/react";
+import { IconButton, Flex, Link, HStack } from "@chakra-ui/react";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
 import { Navigation } from "./Navigation";
@@ -13,7 +13,7 @@ export const Header = () => {
           _hover={{ textDecoration: "none" }}
           _focus={{ outline: "none" }}
           fontSize={{ base: "md", md: "xl" }}
-          color={"brand.green.base"}
+          color={"white"}
           fontWeight={600}
           mr={6}
         >
@@ -21,12 +21,8 @@ export const Header = () => {
         </Link>
       </NextLink>
       <Navigation />
-      <Flex ml={"auto"}>
+      <HStack spacing={[2, 4]} ml={"auto"}>
         <IconButton
-          ml={{
-            base: 2,
-            md: 4,
-          }}
           as={"a"}
           href="https://github.com/hauptrolle"
           variant={"ghost"}
@@ -35,10 +31,6 @@ export const Header = () => {
           icon={<AiFillGithub size={20} />}
         />
         <IconButton
-          ml={{
-            base: 2,
-            md: 4,
-          }}
           as={"a"}
           href="https://twitter.com/hauptrolle_"
           variant={"ghost"}
@@ -46,7 +38,7 @@ export const Header = () => {
           aria-label={"Twitter Link"}
           icon={<AiOutlineTwitter size={20} />}
         />
-      </Flex>
+      </HStack>
     </Flex>
   );
 };

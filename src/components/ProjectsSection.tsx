@@ -31,6 +31,7 @@ export const ProjectsSection = ({ projects }: Props) => {
             p={6}
             rounded={"md"}
             bg={"gray.900"}
+            color={"white"}
             _hover={{
               textDecoration: "none",
               transform: "translateY(-5px)",

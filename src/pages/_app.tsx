@@ -63,9 +63,9 @@ const App = ({ Component, pageProps, router }: AppProps) => {
               }}
             >
               <Component {...pageProps} />
+              <Footer />
             </MotionBox>
           </AnimatePresence>
-          <Footer />
         </PageWrapper>
       </DarkMode>
     </ChakraProvider>

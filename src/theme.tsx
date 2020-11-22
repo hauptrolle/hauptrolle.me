@@ -29,9 +29,18 @@ const styles = {
   }),
 };
 
+const components = {
+  Link: {
+    baseStyle: {
+      color: "brand.green.base",
+    },
+  },
+};
+
 export const theme = extendTheme({
   useSystemColorMode: false,
   initialColorMode: "dark",
   colors,
   styles,
+  components,
 });
