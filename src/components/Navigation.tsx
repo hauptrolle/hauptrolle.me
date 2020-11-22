@@ -1,7 +1,7 @@
 import React from "react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { HStack, Link } from "@chakra-ui/react";
+import { HStack, Link, BoxProps } from "@chakra-ui/react";
 
 // Todo disable links as long as there is no meaningful content
 const links = [
@@ -19,11 +19,11 @@ const links = [
   },
 ];
 
-export const Navigation = () => {
+export const Navigation = ({ ...restProps }: BoxProps) => {
   const { pathname } = useRouter();
 
   return (
-    <HStack spacing={4}>
+    <HStack spacing={4} {...restProps}>
       {links.map((link) => (
         <NextLink key={link.href} href={link.href} passHref={true}>
           <Link
