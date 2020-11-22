@@ -42,7 +42,7 @@ export const ProjectsPage: NextPage<Props> = ({ projects, starred }) => {
       <SectionHeadline>Projects</SectionHeadline>
 
       <Text mb={6} fontSize={"lg"}>
-        Here are some of my open source projects fetched from GitGub
+        Here are some of my open source projects. Fetched from GitHub.
       </Text>
 
       <Stack spacing={12}>
