@@ -30,16 +30,17 @@ export const HeroSection = () => {
           }}
         >
           I am currently developing{" "}
-          <Box
-            as={"span"}
-            bg={"brand.green.base"}
-            color={"gray.800"}
-            p={1}
-            px={2}
-          >
+          <Box as={"span"} color={"brand.green.base"} p={1} px={2}>
             Enterprise-React-Applications
           </Box>{" "}
-          at <Link href="https://www.aoe.com/de/home.html">AOE</Link>.
+          at{" "}
+          <Link
+            href="https://www.aoe.com/de/home.html"
+            color={"brand.green.base"}
+          >
+            AOE
+          </Link>
+          .
         </Text>
       </Stack>
     </Section>
