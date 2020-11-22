@@ -7,7 +7,7 @@ export const Section: React.FC = ({ children }) => {
       py={{
         base: 10,
         md: 16,
-        lg: 32,
+        lg: 24,
       }}
     >
       {children}

@@ -6,10 +6,9 @@ import {
   Text,
   Stack,
   Flex,
-  useColorModeValue,
+  SimpleGrid,
 } from "@chakra-ui/react";
 
-import { PageWrapper } from "./PageWrapper";
 import { Section } from "./Section";
 import { SectionHeadline } from "./SectionHeadline";
 import { SideProject } from "../api/github";
@@ -20,32 +19,40 @@ type Props = {
 
 export const ProjectsSection = ({ projects }: Props) => {
   return (
-    <PageWrapper>
-      <Section>
-        <SectionHeadline>Side Projects</SectionHeadline>
-        <Stack spacing={8}>
-          {projects.map((project) => (
-            <Box
-              key={project.id}
-              as={Link}
-              href={project.url}
-              display={"block"}
-              p={6}
-              rounded={"md"}
-              bg={useColorModeValue("gray.100", "brand.dark.shade")}
-              _hover={{
-                bg: "brand.green.base",
-                color: "brand.dark.base",
-                textDecoration: "none",
-                transform: "translateY(-5px)",
-              }}
-            >
-              <Stack spacing={2}>
-                <Heading as={"h3"} size={"md"} fontWeight={500}>
-                  {project.name}
-                </Heading>
-                <Text>{project.description}</Text>
-                <Flex justifyContent={"space-between"}>
+    <Section>
+      <SectionHeadline>Side Projects</SectionHeadline>
+      <SimpleGrid columns={[1, 1, 2]} spacing={10}>
+        {projects.map((project) => (
+          <Box
+            key={project.id}
+            as={Link}
+            href={project.url}
+            display={"block"}
+            p={6}
+            rounded={"md"}
+            bg={"gray.900"}
+            _hover={{
+              textDecoration: "none",
+              transform: "translateY(-5px)",
+            }}
+          >
+            <Stack spacing={4} h={"full"}>
+              <Heading
+                as={"h3"}
+                size={"md"}
+                fontWeight={500}
+                color={"brand.green.base"}
+              >
+                {project.name}
+              </Heading>
+              <Text>{project.description}</Text>
+              <Flex height={"full"}>
+                <Flex
+                  mt={"auto"}
+                  w={"full"}
+                  alignItems={"center"}
+                  justifyContent={"space-between"}
+                >
                   <Text fontSize={"sm"}>
                     {project.stargazers.totalCount} 🌟
                   </Text>
@@ -57,11 +64,11 @@ export const ProjectsSection = ({ projects }: Props) => {
                     Explore on GitHub
                   </Text>
                 </Flex>
-              </Stack>
-            </Box>
-          ))}
-        </Stack>
-      </Section>
-    </PageWrapper>
+              </Flex>
+            </Stack>
+          </Box>
+        ))}
+      </SimpleGrid>
+    </Section>
   );
 };

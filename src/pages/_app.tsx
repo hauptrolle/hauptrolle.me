@@ -1,39 +1,17 @@
+import React from "react";
 import type { AppProps } from "next/app";
-import { ChakraProvider, extendTheme, DarkMode } from "@chakra-ui/react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChakraProvider, DarkMode, Box, BoxProps } from "@chakra-ui/react";
 import Head from "next/head";
 
-import React from "react";
+import { theme } from "../theme";
+import { PageWrapper } from "../components/PageWrapper";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
-const theme = extendTheme({
-  useSystemColorMode: false,
-  initialColorMode: "dark",
-  colors: {
-    brand: {
-      green: {
-        base: "#0fa",
-        shade: "rgb(77 255 167 / 10%)",
-      },
-      dark: {
-        base: "#1a1c1d",
-        shade: "#131514",
-      },
-    },
-  },
-  styles: {
-    global: (props) => ({
-      "html, body": {
-        bg: "brand.dark.base",
-        color: "white",
-      },
-      "*::selection": {
-        backgroundColor: "brand.green.shade",
-        color: "brand.green.base",
-      },
-    }),
-  },
-});
+const MotionBox = motion.custom<BoxProps>(Box);
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps, router }: AppProps) => {
   return (
     <ChakraProvider theme={theme} resetCSS={true}>
       <Head>
@@ -66,8 +44,29 @@ const App = ({ Component, pageProps }: AppProps) => {
           <script async src="https://cdn.splitbee.io/sb.js" />
         )}
       </Head>
+
       <DarkMode>
-        <Component {...pageProps} />
+        <PageWrapper>
+          <Header />
+          <AnimatePresence exitBeforeEnter>
+            <MotionBox
+              as="main"
+              animate="enter"
+              exit="exit"
+              flexGrow={1}
+              initial="initial"
+              key={router.route}
+              variants={{
+                initial: { opacity: 0, y: -50 },
+                enter: { opacity: 1, y: 0 },
+                exit: { opacity: 0, y: 50 },
+              }}
+            >
+              <Component {...pageProps} />
+            </MotionBox>
+          </AnimatePresence>
+          <Footer />
+        </PageWrapper>
       </DarkMode>
     </ChakraProvider>
   );
