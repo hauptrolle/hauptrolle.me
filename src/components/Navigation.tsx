@@ -32,7 +32,6 @@ export const Navigation = () => {
             rounded={"md"}
             color={"white"}
             _hover={{ textDecoration: "none", bg: "gray.900" }}
-            _focus={{ outline: "none", bg: "gray.900" }}
             css={{ transition: "all 0.3s ease-in-out" }}
             bg={pathname === link.href ? "gray.900" : "inherit"}
           >

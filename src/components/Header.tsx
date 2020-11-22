@@ -11,7 +11,6 @@ export const Header = () => {
       <NextLink href={"/"} passHref={true}>
         <Link
           _hover={{ textDecoration: "none" }}
-          _focus={{ outline: "none" }}
           fontSize={{ base: "md", md: "xl" }}
           color={"white"}
           fontWeight={600}

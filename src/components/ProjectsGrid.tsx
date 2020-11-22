@@ -7,17 +7,18 @@ import {
   Stack,
   Flex,
   SimpleGrid,
+  SimpleGridProps,
 } from "@chakra-ui/react";
 
 import { SideProject } from "../api/github";
 
-type Props = {
+type Props = SimpleGridProps & {
   projects: SideProject[];
 };
 
-export const ProjectsGrid = ({ projects }: Props) => {
+export const ProjectsGrid = ({ projects, ...restProps }: Props) => {
   return (
-    <SimpleGrid columns={[1, 1, 2]} spacing={10}>
+    <SimpleGrid columns={[1, 1, 2]} spacing={8} {...restProps}>
       {projects.map((project) => (
         <Box
           key={project.id}

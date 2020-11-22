@@ -1,4 +1,4 @@
-import { fetchData, PAGES, Repo } from "./github";
+import { fetchData, Repo } from "./github";
 
 type Response = {
   user: {
@@ -12,7 +12,7 @@ export const fetchStarred = async () => {
   const query = `
     query {
       user (login: "hauptrolle") {
-        starredRepositories(last: ${PAGES}) {
+        starredRepositories(last: 15) {
           nodes {
             id
             name

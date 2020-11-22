@@ -62,7 +62,7 @@ export const AboutPage = () => {
             </Link>
             , doing some further education like{" "}
             <Link href={"https://epicreact.dev/"}>Epic React</Link> from Kent C.
-            Dodds, or playing video Games. Occasionally I stream my gaming
+            Dodds, or playing video games. Occasionally I stream my gaming
             success on{" "}
             <Link href={"https://www.twitch.tv/h1roplays"}>twitch</Link>.
           </Text>
