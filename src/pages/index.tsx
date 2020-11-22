@@ -3,7 +3,6 @@ import { GetStaticProps, NextPage } from "next";
 
 import { Header } from "../components/Header";
 import { HeroSection } from "../components/HeroSection";
-// import { SkillsSection } from "../components/SkillsSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { Footer } from "../components/Footer";
 import { GithubActivitySection } from "../components/GithubActivitySection";
@@ -31,7 +30,6 @@ const HomePage: NextPage<Props> = ({ starred, contributed, sideProjects }) => {
     <>
       <Header />
       <HeroSection />
-      {/*<SkillsSection />*/}
       <ProjectsSection projects={sideProjects} />
       <GithubActivitySection starred={starred} contributed={contributed} />
       <Footer />

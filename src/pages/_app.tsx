@@ -1,11 +1,12 @@
 import type { AppProps } from "next/app";
-import { ChakraProvider, theme } from "@chakra-ui/core";
-import { merge } from "@chakra-ui/utils";
+import { ChakraProvider, extendTheme, DarkMode } from "@chakra-ui/react";
 import Head from "next/head";
 
 import React from "react";
 
-const hauptrolleTheme = merge(theme, {
+const theme = extendTheme({
+  useSystemColorMode: false,
+  initialColorMode: "dark",
   colors: {
     brand: {
       green: {
@@ -21,8 +22,8 @@ const hauptrolleTheme = merge(theme, {
   styles: {
     global: (props) => ({
       "html, body": {
-        bg: props.colorMode === "dark" ? "brand.dark.base" : "white",
-        color: props.colorMode === "dark" ? "white" : "gray.800",
+        bg: "brand.dark.base",
+        color: "white",
       },
       "*::selection": {
         backgroundColor: "brand.green.shade",
@@ -32,9 +33,9 @@ const hauptrolleTheme = merge(theme, {
   },
 });
 
-function HauptrolleApp({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <ChakraProvider theme={hauptrolleTheme} resetCSS={true}>
+    <ChakraProvider theme={theme} resetCSS={true}>
       <Head>
         <title>Achim Rolle - Frontend developer & web designer</title>
         <meta
@@ -65,9 +66,11 @@ function HauptrolleApp({ Component, pageProps }: AppProps) {
           <script async src="https://cdn.splitbee.io/sb.js" />
         )}
       </Head>
-      <Component {...pageProps} />
+      <DarkMode>
+        <Component {...pageProps} />
+      </DarkMode>
     </ChakraProvider>
   );
-}
+};
 
-export default HauptrolleApp;
+export default App;

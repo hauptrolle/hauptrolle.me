@@ -5,7 +5,7 @@ import {
   Text,
   Flex,
   useColorModeValue,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 
 import { skills } from "../skills";
 import { PageWrapper } from "./PageWrapper";

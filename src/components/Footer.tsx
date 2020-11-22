@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Text, Box, useColorModeValue, useTheme } from "@chakra-ui/core";
+import { Flex, Text, Box, useColorModeValue, useTheme } from "@chakra-ui/react";
 
 import { PageWrapper } from "./PageWrapper";
 

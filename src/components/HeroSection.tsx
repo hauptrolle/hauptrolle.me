@@ -6,7 +6,7 @@ import {
   Stack,
   Box,
   useColorModeValue,
-} from "@chakra-ui/core";
+} from "@chakra-ui/react";
 
 import { PageWrapper } from "./PageWrapper";
 import { Section } from "./Section";
