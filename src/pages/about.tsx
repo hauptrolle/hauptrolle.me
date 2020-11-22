@@ -21,7 +21,7 @@ const skills = [
   },
   {
     title: "Frontend",
-    knowledge: ["React", "Vue", "Next.js", "Tailwind CSS", "CSS in JS"],
+    knowledge: ["React", "Next.js", "Tailwind CSS", "CSS in JS"],
   },
   {
     title: "Testing",
@@ -37,8 +37,8 @@ const skills = [
     knowledge: [
       "Web Accessibility",
       "SCRUM & Agile Work",
-      "GraphQL/Rest",
-      "Figma/Sketch",
+      "GraphQL & Rest",
+      "Figma & Sketch",
     ],
   },
 ];
@@ -72,7 +72,7 @@ export const AboutPage = () => {
         </Box>
       </Flex>
 
-      <Box bg={"gray.700"} p={8} rounded={"md"}>
+      <Box bg={"gray.900"} p={8} rounded={"md"}>
         <SectionHeadline size={"lg"} as={"h3"}>
           My Knowledge
         </SectionHeadline>

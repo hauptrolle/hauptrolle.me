@@ -3,16 +3,15 @@ import { GetStaticProps, NextPage } from "next";
 
 import { HeroSection } from "../components/HeroSection";
 import { ProjectsSection } from "../components/ProjectsSection";
-import { fetchRepositories, Repo, SideProject } from "../api/github";
+import { SideProject } from "../api/github";
+import { fetchProjects } from "../api/projects";
 
 type Props = {
-  starred: Repo[];
-  contributed: Repo[];
-  sideProjects: SideProject[];
+  projects: SideProject[];
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const response = await fetchRepositories();
+  const response = await fetchProjects();
 
   return {
     props: {
@@ -22,11 +21,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const HomePage: NextPage<Props> = ({ starred, contributed, sideProjects }) => {
+const HomePage: NextPage<Props> = ({ projects }) => {
   return (
     <>
       <HeroSection />
-      <ProjectsSection projects={sideProjects} />
+      <ProjectsSection projects={projects} />
     </>
   );
 };

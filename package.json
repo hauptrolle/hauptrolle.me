@@ -14,7 +14,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:ts": "tsc --no-emit"
+    "lint:ts": "tsc --noEmit"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.0.1",
