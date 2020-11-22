@@ -38,6 +38,7 @@ export const HeroSection = () => {
           <Link
             href="https://www.aoe.com/de/home.html"
             color={"brand.green.base"}
+            data-splitbee-event="aoe hero link clicked"
           >
             AOE
           </Link>
@@ -47,6 +48,7 @@ export const HeroSection = () => {
       <NextLink href={"/about"} passHref={true}>
         <Button
           as={Link}
+          data-splitbee-event="cta button clicked"
           variant={"outline"}
           rightIcon={<MdArrowForward />}
           _hover={{ textDecoration: "none", bg: "gray.700" }}
