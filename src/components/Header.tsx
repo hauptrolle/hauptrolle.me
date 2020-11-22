@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 import {
   IconButton,
   Flex,
@@ -13,7 +15,20 @@ import { MdMenu } from "react-icons/md";
 import { Navigation } from "./Navigation";
 
 export const Header = () => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle, onClose } = useDisclosure();
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      onClose();
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
 
   return (
     <>
