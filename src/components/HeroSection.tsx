@@ -1,4 +1,6 @@
-import { Heading, Text, Link, Stack, Box } from "@chakra-ui/react";
+import NextLink from "next/link";
+import { Heading, Text, Link, Stack, Box, Button } from "@chakra-ui/react";
+import { MdArrowForward } from "react-icons/md";
 
 import { Section } from "./Section";
 
@@ -8,7 +10,7 @@ export const HeroSection = () => {
       <Heading as="h1" size="2xl" mb={8}>
         Hallo. 👋
       </Heading>
-      <Stack spacing={3} maxW={"5xl"}>
+      <Stack spacing={3} maxW={"5xl"} mb={12}>
         <Text
           color={"white"}
           fontSize={{
@@ -42,6 +44,16 @@ export const HeroSection = () => {
           .
         </Text>
       </Stack>
+      <NextLink href={"/about"} passHref={true}>
+        <Button
+          as={Link}
+          variant={"outline"}
+          rightIcon={<MdArrowForward />}
+          _hover={{ textDecoration: "none", bg: "gray.700" }}
+        >
+          Learn more about me
+        </Button>
+      </NextLink>
     </Section>
   );
 };
