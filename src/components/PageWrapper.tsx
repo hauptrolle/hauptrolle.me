@@ -1,6 +1,6 @@
-import React from "react";
+import { FC } from "react";
 import { Container } from "@chakra-ui/react";
 
-export const PageWrapper: React.FC = ({ children }) => {
+export const PageWrapper: FC = ({ children }) => {
   return <Container maxW={"lg"}>{children}</Container>;
 };

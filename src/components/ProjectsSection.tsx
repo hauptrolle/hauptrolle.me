@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Section } from "./Section";
 import { SectionHeadline } from "./SectionHeadline";
 import { SideProject } from "../api/github";

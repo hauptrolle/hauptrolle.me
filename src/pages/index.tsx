@@ -1,4 +1,3 @@
-import React from "react";
 import { GetStaticProps, NextPage } from "next";
 
 import { HeroSection } from "../components/HeroSection";

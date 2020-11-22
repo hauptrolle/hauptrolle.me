@@ -1,4 +1,3 @@
-import React from "react";
 import type { AppProps } from "next/app";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChakraProvider, DarkMode, Box, BoxProps } from "@chakra-ui/react";
