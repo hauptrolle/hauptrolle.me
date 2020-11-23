@@ -31,9 +31,9 @@ export const HeroSection = () => {
           }}
         >
           I am currently developing{" "}
-          <Box as={"span"} color={"brand.green.base"} p={1} px={2}>
+          <Text as={"span"} color={"brand.green.base"}>
             Enterprise-React-Applications
-          </Box>{" "}
+          </Text>{" "}
           at{" "}
           <Link
             href="https://www.aoe.com/de/home.html"
