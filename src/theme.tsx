@@ -1,4 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
+import hexToRgba from "hex-to-rgba";
 
 const colors = {
   brand: {
@@ -14,7 +15,7 @@ const colors = {
 };
 
 const styles = {
-  global: () => ({
+  global: ({ theme }) => ({
     html: {
       overflowY: "scroll",
     },
@@ -25,6 +26,20 @@ const styles = {
     "*::selection": {
       backgroundColor: "brand.green.shade",
       color: "brand.green.base",
+    },
+    "@keyframes pulse-live": {
+      "0%": {
+        transform: "scale(0.95)",
+        boxShadow: `0 0 0 0 ${hexToRgba(theme.colors.red[600], 0.8)}`,
+      },
+      "70%": {
+        transform: "scale(1)",
+        boxShadow: `0 0 0 6px ${hexToRgba(theme.colors.red[600], 0)}`,
+      },
+      "100%": {
+        transform: "scale(0.95)",
+        boxShadow: `0 0 0 0 ${hexToRgba(theme.colors.red[600], 0)}`,
+      },
     },
   }),
 };

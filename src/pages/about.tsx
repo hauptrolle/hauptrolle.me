@@ -13,6 +13,7 @@ import {
 import { MdDone } from "react-icons/md";
 
 import { SectionHeadline } from "../components/SectionHeadline";
+import { TwitchStatus } from "../components/TwitchStatus";
 
 const skills = [
   {
@@ -64,7 +65,8 @@ export const AboutPage = () => {
             <Link href={"https://epicreact.dev/"}>Epic React</Link> from Kent C.
             Dodds, or playing video games. Occasionally I stream my gaming
             success on{" "}
-            <Link href={"https://www.twitch.tv/h1roplays"}>twitch</Link>.
+            <Link href={"https://www.twitch.tv/h1roplays"}>twitch</Link>
+            <TwitchStatus />.
           </Text>
         </Stack>
         <Box minW={150} margin={"auto"} order={[1, 1, 2]}>

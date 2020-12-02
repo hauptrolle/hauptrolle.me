@@ -27,7 +27,7 @@ export const Navigation = ({ ...restProps }: BoxProps) => {
         <NextLink key={link.href} href={link.href} passHref={true}>
           <Link
             px={2}
-            py={1}
+            py={2}
             rounded={"md"}
             color={"white"}
             _hover={{ textDecoration: "none", bg: "gray.900" }}
