@@ -47,7 +47,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
       <DarkMode>
         <PageWrapper>
           <Header />
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence initial={false} exitBeforeEnter>
             <MotionBox
               as="main"
               animate="enter"
