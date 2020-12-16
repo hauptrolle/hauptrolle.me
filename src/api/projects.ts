@@ -1,8 +1,15 @@
 import { fetchData, SideProject } from "./github";
 
+type Projects =
+  | "stitchesUtils"
+  | "stitchesReset"
+  | "reactTodo"
+  | "hauptrolleMe"
+  | "nextplate";
+
 type Response = {
   user: {
-    [name: string]: SideProject;
+    [key in Projects]: SideProject;
   };
 };
 
@@ -30,6 +37,9 @@ query {
     hauptrolleMe: repository(name: "hauptrolle.me") {
       ${fields}
     }
+    nextplate: repository(name: "nextplate") {
+      ${fields}
+    }
   }
 }`;
 
@@ -41,6 +51,7 @@ query {
       data.user.stitchesReset,
       data.user.reactTodo,
       data.user.hauptrolleMe,
+      data.user.nextplate,
     ],
   };
 };
