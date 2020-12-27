@@ -75,6 +75,10 @@ export const AboutPage = () => {
       <SectionHeadline>Hallo, I am Achim.</SectionHeadline>
       <Flex direction={["column", "column", "row"]} mb={{ base: 12, md: 0 }}>
         <Stack spacing={6} maxW={"2xl"} order={[2, 2, 1]}>
+          <Text fontSize={"xl"} as={"em"}>
+            A self taught frontend developer & web designer from Hessen/Germany.
+          </Text>
+
           <Text fontSize={"lg"}>
             Currently I am developing <i>Enterprise React Applications</i> at{" "}
             <Link href={"https://www.aoe.com/de/home.html"}>AOE</Link> in
