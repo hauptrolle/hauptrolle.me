@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   Text,
   Box,
@@ -45,11 +44,36 @@ const skills = [
   },
 ];
 
+const Avatar = () => (
+  <BigHead
+    accessory="none"
+    body="chest"
+    circleColor="blue"
+    clothing="shirt"
+    clothingColor="black"
+    eyebrows="leftLowered"
+    eyes="simple"
+    faceMask
+    faceMaskColor="black"
+    facialHair="none"
+    graphic="react"
+    hair="short"
+    hairColor="brown"
+    hat="none"
+    hatColor="black"
+    lashes={false}
+    lipColor="turqoise"
+    mask={false}
+    mouth="grin"
+    skinTone="light"
+  />
+);
+
 export const AboutPage = () => {
   return (
     <>
       <SectionHeadline>Hallo, I am Achim.</SectionHeadline>
-      <Flex mb={{ sm: 12, md: 0 }} direction={["column", "column", "row"]}>
+      <Flex direction={["column", "column", "row"]} mb={{ base: 12, md: 0 }}>
         <Stack spacing={6} maxW={"2xl"} order={[2, 2, 1]}>
           <Text fontSize={"lg"}>
             Currently I am developing <i>Enterprise React Applications</i> at{" "}
@@ -70,35 +94,8 @@ export const AboutPage = () => {
             <TwitchStatus />.
           </Text>
         </Stack>
-        <Box
-          minW={300}
-          margin={"auto"}
-          order={[1, 1, 2]}
-          mb={{ sm: 12, md: 0 }}
-          mt={{ md: -12 }}
-        >
-          <BigHead
-            accessory="none"
-            body="chest"
-            circleColor="blue"
-            clothing="shirt"
-            clothingColor="black"
-            eyebrows="leftLowered"
-            eyes="simple"
-            faceMask
-            faceMaskColor="black"
-            facialHair="none"
-            graphic="react"
-            hair="short"
-            hairColor="brown"
-            hat="none"
-            hatColor="black"
-            lashes={false}
-            lipColor="turqoise"
-            mask={false}
-            mouth="grin"
-            skinTone="light"
-          />
+        <Box minW={300} mx={"auto"} mb={{ base: 12, md: 0 }} order={[1, 1, 2]}>
+          <Avatar />
         </Box>
       </Flex>
 
