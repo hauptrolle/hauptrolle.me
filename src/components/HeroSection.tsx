@@ -31,13 +31,13 @@ export const HeroSection = () => {
           }}
         >
           I am currently developing{" "}
-          <Text as={"span"} color={"brand.green.base"}>
+          <Text as={"span"} color={"brandGreen.500"}>
             Enterprise-React-Applications
           </Text>{" "}
           at{" "}
           <Link
             href="https://www.aoe.com/de/home.html"
-            color={"brand.green.base"}
+            color={"brandGreen.500"}
             data-splitbee-event="aoe hero link clicked"
           >
             AOE

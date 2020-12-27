@@ -38,7 +38,7 @@ export const ProjectsGrid = ({ projects, ...restProps }: Props) => {
               as={"h3"}
               size={"md"}
               fontWeight={500}
-              color={"brand.green.base"}
+              color={"brandGreen.500"}
             >
               {project.name}
             </Heading>

@@ -2,15 +2,13 @@ import { extendTheme } from "@chakra-ui/react";
 import hexToRgba from "hex-to-rgba";
 
 const colors = {
-  brand: {
-    green: {
-      base: "#0fa",
-      shade: "rgb(77 255 167 / 10%)",
-    },
-    dark: {
-      base: "#1a1c1d",
-      shade: "#131514",
-    },
+  brandGreen: {
+    100: "rgb(77 255 167 / 10%)",
+    500: "#0fa",
+  },
+  brandDark: {
+    100: "#131514",
+    500: "#1a1c1d",
   },
 };
 
@@ -24,8 +22,8 @@ const styles = {
       color: "white",
     },
     "*::selection": {
-      backgroundColor: "brand.green.shade",
-      color: "brand.green.base",
+      backgroundColor: "brandGreen.100",
+      color: "brandGreen.500",
     },
     "@keyframes pulse-live": {
       "0%": {
@@ -47,7 +45,7 @@ const styles = {
 const components = {
   Link: {
     baseStyle: {
-      color: "brand.green.base",
+      color: "brandGreen.500",
     },
   },
 };

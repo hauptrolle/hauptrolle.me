@@ -118,7 +118,7 @@ export const AboutPage = () => {
               <List>
                 {skill.knowledge.map((k) => (
                   <ListItem key={k}>
-                    <ListIcon as={MdDone} color={"brand.green.base"} />
+                    <ListIcon as={MdDone} color={"brandGreen.500"} />
                     {k}
                   </ListItem>
                 ))}
