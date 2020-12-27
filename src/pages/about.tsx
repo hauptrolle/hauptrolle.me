@@ -11,6 +11,7 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import { MdDone } from "react-icons/md";
+import { BigHead } from "@bigheads/core";
 
 import { SectionHeadline } from "../components/SectionHeadline";
 import { TwitchStatus } from "../components/TwitchStatus";
@@ -48,7 +49,7 @@ export const AboutPage = () => {
   return (
     <>
       <SectionHeadline>Hallo, I am Achim.</SectionHeadline>
-      <Flex mb={12} direction={["column", "column", "row"]}>
+      <Flex mb={{ sm: 12, md: 0 }} direction={["column", "column", "row"]}>
         <Stack spacing={6} maxW={"2xl"} order={[2, 2, 1]}>
           <Text fontSize={"lg"}>
             Currently I am developing <i>Enterprise React Applications</i> at{" "}
@@ -69,8 +70,35 @@ export const AboutPage = () => {
             <TwitchStatus />.
           </Text>
         </Stack>
-        <Box minW={150} margin={"auto"} order={[1, 1, 2]}>
-          <Image src={"/avatar.png"} width={150} height={150} />
+        <Box
+          minW={300}
+          margin={"auto"}
+          order={[1, 1, 2]}
+          mb={{ sm: 12, md: 0 }}
+          mt={{ md: -12 }}
+        >
+          <BigHead
+            accessory="none"
+            body="chest"
+            circleColor="blue"
+            clothing="shirt"
+            clothingColor="black"
+            eyebrows="leftLowered"
+            eyes="simple"
+            faceMask
+            faceMaskColor="black"
+            facialHair="none"
+            graphic="react"
+            hair="short"
+            hairColor="brown"
+            hat="none"
+            hatColor="black"
+            lashes={false}
+            lipColor="turqoise"
+            mask={false}
+            mouth="grin"
+            skinTone="light"
+          />
         </Box>
       </Flex>
 

@@ -118,6 +118,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@bigheads/core@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@bigheads/core/-/core-0.3.1.tgz#b495f6d83b067ace5eb49a8bea05fd884c90ec4d"
+  integrity sha512-qI6sfKPVne0jhePjpJ6AU10S0LwZUizFpPyAEbUH1zRHfWWvCc56jQCuwP869q94I7HlFz4jBCdmjEYL4lSvJw==
+
 "@chakra-ui/accordion@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@chakra-ui/accordion/-/accordion-1.0.1.tgz#0e170b5702945a3e48b895ec71a8c3b0723db185"
