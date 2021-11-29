@@ -1,25 +1,23 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from "next/document";
 import { ColorModeScript } from "@chakra-ui/react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import React from "react";
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
+import theme from "../theme";
 
-    return initialProps;
-  }
-
+class Doc extends Document {
   render() {
     return (
-      <Html lang={"en"}>
-        <Head />
+      <Html lang="en">
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@400;600;700&display=swap"
+            rel="stylesheet"
+          />
+          <script data-no-cookie async data-api="/_hive" src="/bee.js" />
+        </Head>
+
         <body>
-          <ColorModeScript initialColorMode={"dark"} />
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
@@ -28,4 +26,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+export default Doc;

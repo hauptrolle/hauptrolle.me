@@ -1,30 +1,27 @@
-import { GetStaticProps, NextPage } from "next";
+import { Text, List, ListItem, VStack } from "@chakra-ui/react";
+import { NextPage } from "next";
 
-import { HeroSection } from "../components/HeroSection";
-import { ProjectsSection } from "../components/ProjectsSection";
-import { SideProject } from "../api/github";
-import { fetchProjects } from "../api/projects";
+import { EmploymentCard } from "../components/EmploymentCard";
+import { Hero } from "../components/Hero";
+import { employments } from "../data/employments";
 
-type Props = {
-  projects: SideProject[];
-};
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const response = await fetchProjects();
-
-  return {
-    props: {
-      ...response,
-    },
-    revalidate: 10,
-  };
-};
-
-const HomePage: NextPage<Props> = ({ projects }) => {
+const HomePage: NextPage = () => {
   return (
     <>
-      <HeroSection />
-      <ProjectsSection projects={projects} />
+      <VStack spacing={16} alignItems="flex-start">
+        <Hero />
+        <VStack spacing={8} w="full" alignItems="stretch">
+          <Text textStyle="sectionHeading">Currently</Text>
+
+          <List spacing={6}>
+            {employments.map((employment) => (
+              <ListItem key={employment.company}>
+                <EmploymentCard {...employment} />
+              </ListItem>
+            ))}
+          </List>
+        </VStack>
+      </VStack>
     </>
   );
 };
