@@ -6,6 +6,13 @@ const config: ThemeConfig = {
   useSystemColorMode: true,
 };
 
+const focusRing = () => ({
+  _focus: {
+    ringColor: "green.600",
+    ring: 2,
+  },
+});
+
 const theme = extendTheme({
   config,
   textStyles: {
@@ -33,6 +40,18 @@ const theme = extendTheme({
       700: mauveDark.mauve3,
       800: mauveDark.mauve1,
       900: mauveDark.mauve1,
+    },
+  },
+  components: {
+    Link: {
+      baseStyle: {
+        ...focusRing(),
+      },
+    },
+    Button: {
+      baseStyle: {
+        ...focusRing(),
+      },
     },
   },
 });
