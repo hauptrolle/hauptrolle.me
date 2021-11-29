@@ -1,12 +1,46 @@
-import { Button, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  chakra,
+  Heading,
+  HStack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import NextImage from "next/image";
 import NextLink from "next/link";
 import { SiGithub, SiTwitter } from "react-icons/si";
 
+import avatarUrl from "../../../public/avatar.png";
 import { GITHUB_PROFILE, TWITTER_PROFILE } from "../../constants";
+
+const AvatarImage = chakra(NextImage, {
+  shouldForwardProp: (prop) =>
+    [
+      "width",
+      "height",
+      "layout",
+      "src",
+      "alt",
+      "quality",
+      "placeholder",
+      "blurDataURL",
+      "loader ",
+    ].includes(prop),
+});
 
 export const Hero = () => {
   return (
     <VStack spacing={4} alignItems="flex-start">
+      <AvatarImage
+        src={avatarUrl}
+        alt="Memoji of me"
+        priority
+        quality={100}
+        height={81}
+        width={64}
+        placeholder="blur"
+      />
+
       <Heading size="lg" as="h1">
         Hi, I’m Achim
       </Heading>
