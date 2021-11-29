@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import { FC } from "react";
 
 import { Footer } from "../Footer";
@@ -12,7 +12,7 @@ const PageContainer: FC = ({ children }) => {
       pt={24}
       maxW="container.sm"
     >
-      {children}
+      <Box pb={24}>{children}</Box>
 
       <Footer />
     </Container>
