@@ -59,7 +59,7 @@ export const Hero = () => {
           </Button>
         </NextLink>
         <NextLink href={TWITTER_PROFILE} passHref={true}>
-          <Button size="sm" leftIcon={<SiTwitter />}>
+          <Button size="sm" as="a" leftIcon={<SiTwitter />}>
             Twitter
           </Button>
         </NextLink>
