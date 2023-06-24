@@ -1,11 +1,13 @@
 import { DocumentRenderer } from "@keystatic/core/renderer";
+import { type ClassValue, clsx } from "clsx";
 import { Metadata } from "next";
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 import invariant from "tiny-invariant";
 
 import { reader } from "@/app/reader";
 
-import { cn } from "../../lib/helpers";
+export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 export async function generateMetadata(): Promise<Metadata> {
   const homepage = await reader.singletons.homepage.read();
