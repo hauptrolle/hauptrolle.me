@@ -4,7 +4,8 @@ import Image from "next/image";
 import invariant from "tiny-invariant";
 
 import { reader } from "@/app/reader";
-import { cn } from "@/lib/helpers";
+
+import { cn } from "../../lib/helpers";
 
 export async function generateMetadata(): Promise<Metadata> {
   const homepage = await reader.singletons.homepage.read();
