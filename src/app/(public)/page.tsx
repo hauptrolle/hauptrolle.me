@@ -7,7 +7,7 @@ import invariant from "tiny-invariant";
 
 import { reader } from "@/app/reader";
 
-export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
+const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
 
 export async function generateMetadata(): Promise<Metadata> {
   const homepage = await reader.singletons.homepage.read();
