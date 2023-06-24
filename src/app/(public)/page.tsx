@@ -6,8 +6,6 @@ import invariant from "tiny-invariant";
 import { reader } from "@/app/reader";
 import { cn } from "@/lib/helpers";
 
-import Avatar from "./avatar.jpg";
-
 export async function generateMetadata(): Promise<Metadata> {
   const homepage = await reader.singletons.homepage.read();
 
