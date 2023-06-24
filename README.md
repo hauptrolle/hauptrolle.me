@@ -1,8 +1,20 @@
-# hauptrolle.me
+# Keystatic in Next.js
 
-This is my website on the internet. It's build with the following technologies:
+This template shows how you can use Keystatic in a Next.js site that utilises
+the `app` directory.
 
-- [React](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://typescriptlang.org)
-- [Chakra UI](https://next.chakra-ui.com/)
+To setup:
+
+```bash
+npm install
+```
+
+To run:
+
+```
+npm run dev
+```
+
+Admin UI: [http://127.0.0.1:3000/keystatic](http://127.0.0.1:3000/keystatic)
+
+Homepage: [http://localhost:3000](http://localhost:3000)
