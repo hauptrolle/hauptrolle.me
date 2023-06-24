@@ -1,0 +1,13 @@
+company: Bare.ID GmbH
+job: Senior Frontend Developer
+description: Building a DSGVO conform cloud IAM solution hosted in germany.
+periodFrom: '2023-01-01'
+technology:
+  - React
+  - Typescript
+  - Remix
+  - Tailwind
+  - Radix UI
+  - gRPC
+  - Vitest
+  - Playwright

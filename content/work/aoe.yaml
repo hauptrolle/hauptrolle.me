@@ -1,0 +1,15 @@
+company: AOE GmbH
+job: Frontend Developer
+description: Building enterprise react applications for web, mobile & TV.
+periodFrom: '2015-02-01'
+periodTo: '2023-01-01'
+technology:
+  - React
+  - Typescript
+  - Next.js
+  - Styled Components
+  - Material UI
+  - Storybook
+  - GraphQL
+  - Jest
+  - Cypress
