@@ -2,7 +2,11 @@ import { collection, config, fields, singleton } from "@keystatic/core";
 
 export default config({
   storage: {
-    kind: "local",
+    kind: "github",
+    repo: {
+      name: "hauptrolle.me",
+      owner: "hauptrolle"
+    }
   },
   singletons: {
     homepage: singleton({
