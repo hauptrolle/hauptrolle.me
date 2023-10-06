@@ -4,7 +4,7 @@
   "dependencies": {
     "@keystatic/core": "0.1.5",
     "@keystatic/next": "1.0.1",
-    "@vercel/analytics": "1.0.2",
+    "@vercel/analytics": "1.1.0",
     "clsx": "2.0.0",
     "next": "13.5.4",
     "react": "18.2.0",
