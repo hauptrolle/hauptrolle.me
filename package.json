@@ -2,7 +2,7 @@
   "name": "hauptrolle-website",
   "version": "0.0.1",
   "dependencies": {
-    "@keystatic/core": "0.1.5",
+    "@keystatic/core": "0.1.6",
     "@keystatic/next": "1.0.1",
     "@vercel/analytics": "1.1.0",
     "clsx": "2.0.0",
