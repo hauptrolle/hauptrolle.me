@@ -1,16 +1,9 @@
-import { Analytics } from "@vercel/analytics/react";
+import { ReactNode } from "react";
 
-import "../styles/globals.css";
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="antialiased min-h-screen">
-      <body className="min-h-screen">{children}</body>
-      <Analytics />
+    <html lang="en" className="antialiased">
+      <body>{children}</body>
     </html>
   );
 }
