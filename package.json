@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "@keystatic/core": "0.2.6",
-    "@keystatic/next": "2.0.0",
+    "@keystatic/next": "2.0.1",
     "@vercel/analytics": "1.1.1",
     "clsx": "2.0.0",
     "next": "14.0.3",
