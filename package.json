@@ -5,7 +5,7 @@
     "@keystatic/core": "0.5.11",
     "@keystatic/next": "3.0.0",
     "@vercel/analytics": "1.2.2",
-    "clsx": "2.1.0",
+    "clsx": "2.1.1",
     "next": "14.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
